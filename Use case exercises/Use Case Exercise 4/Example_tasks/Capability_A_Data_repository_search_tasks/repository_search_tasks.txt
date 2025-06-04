@@ -1,0 +1,224 @@
+
+# Search tasks for Proteomic Data Commons
+
+repository_search_task_id: PDC0001 
+# former_task_id: example A2
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: On the Proteomic Data Commons site, find the number of clinical cases with hepatocellular carcinoma.
+query_information: 'disease_type’ IS 'Hepatocellular Carcinoma'. Under 'Clinical', find total records.
+# For this task, the answer is simply the number shown for rubric and there is no associated file.
+rubric: 171
+
+repository_search_task_id: PDC0002
+# former_task_id: example A3 
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques:  From the Proteomic Data Commons site, download the biospecimen metadata for specimens with processed mass spectra data from patients with endometrial cancer.
+query_information:'Disease Type’ IS 'Uterine Corpus Endometrial Carcinoma' and ‘Data Category’ IS ’Processed Mass Spectra’. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_biospecimen_manifest’.
+rubric: 'PDC0002_PDC_biospecimen_manifest_12042024_105341.csv’ is provided with this task as the reference.
+
+repository_search_task_id: PDC0003
+# former_task_id: example B8
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download a metadata file with information about proteome protein assembly data files from primary tumor samples. Exclude any disqualified cases and specimens.
+query_information: 'analytical fraction' IS 'Proteome' and 'sample_type' IS 'Primary Tumor' and 'data_category' IS 'Protein Assembly' and 'biospecimen_status' IS 'Qualified' and 'case_status' IS 'Qualified'. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_file_manifest’.
+rubric: 'PDC0003_PDC_file_manifest_12042024_111004.csv' is provided with this task as the reference.
+
+repository_search_task_id: PDC0004
+# former_task_id: task C1
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download a metadata file about raw phosphoproteomic mass spec data files from acute myeloid leukemia patient samples from the BEAT study.
+query_information: 'disease_type' IS 'Acute Myeloid Leukemia' AND 'analytical_fraction' IS 'Phosphoproteome' AND 'study_name' IS 'Beat AML Baseline Clinical - Phosphoproteome' AND 'Data Category' IS 'Raw Mass Spectra'. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_file_manifest’.
+rubric: 'PDC0004_PDC_file_manifest_12042024_111333.csv' is provided with this task as the reference.
+
+repository_search_task_id: PDC0005
+# former_task_id: task C2
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download a file with metadata about studies with DIA proteomics data from pancreatic ductal adenocarcinoma tumor samples.
+query_information: 'disease_type' IS 'Pancreatic Ductal Adenocarcinoma' AND 'analytical_fraction' IS 'Proteome' AND 'acquisition_type' IS 'DIA' AND 'sample_type' IS 'Primary Tumor'. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_study_manifest’.
+rubric:'PDC0005_PDC_study_manifest_12042024_111735.csv' is provided with this task as the reference.
+
+repository_search_task_id: PDC0006
+# former_task_id: task C3
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download a file with metadata about files with raw mass spectrometry glycoproteomic data from serum samples from patients with pancreatic ductal adenocarcinoma.
+query_information: 'disease_type' IS 'Pancreatic Ductal Adenocarcinoma' AND 'analytical_fraction' IS 'Glycoproteome' AND 'sample_type' IS 'Serum' AND 'data_category' IS 'Raw Mass Spectra'. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_file_manifest’.
+rubric:'PDC0006_PDC_file_manifest_12042024_112127.csv" is provided with this task as the reference.
+
+repository_search_task_id: PDC0007
+# former_task_id: similar to former task C4
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download metadata file about biospecimens with metabolomic data from glioblastoma samples.
+query_information:  'disease_type' IS 'Glioblastoma' AND 'sample_type' IS 'Primary Tumor' AND 'analytical_fraction' IS 'Metabolome'. Select ‘Export All Manifests’. Select the file with the name that contains ‘PDC_biospecimen_manifest’.
+rubric:'PDC0007_PDC_biospecimen_manifest_12052024_144705.csv" is provided with this task as the reference.
+
+repository_search_task_id: PDC0008
+# former_task_id: similar but not identical to former task C5
+web: https://proteomic.datacommons.cancer.gov/pdc/browse
+ques: From the Proteomic Data Commons, download the Peptide Spectral Matches file with the name '02CPTAC_UCEC_P_PNNL_20170922_B1S2_f02.mzid.gz', which is associated with the study PDC000126.
+query_information: Search for PDC000126,  which leads to: 'study_name' IS 'CPTAC UCEC Discovery Study – Phosphoproteome'.  Add: 'data_category' IS 'Peptide Spectral Matches'. Locate file named '15CPTAC_UCEC_P_PNNL_20180503_B4S3_f08.mzid.gz' and download it.     
+# For this task we do not provide a file for comparison. Instead, we provide a file name       
+rubric: The file downloaded should have the name'PDC0008_02CPTAC_UCEC_P_PNNL_20170922_B1S2_f02.mzid.gz'.
+
+
+# Search tasks for Genomics Data Commons
+
+repository_search_task_id: GDC0001
+# former_task_id: example A5
+web: https://portal.gdc.cancer.gov/analysis_page?app= 
+ques: From the Genomics Data Commons, download a metadata file with information about all the available data files for the patient with the case id ‘C3L-01355’. 
+query_information: In the search bar, enter ‘C3L-01355’ and click on the suggested link underneath. Then click on ‘Add all files to the cart’. Then scroll down to the table below the word 'Files' and click on the button that says ‘TSV’ or 'JSON'.
+rubric: ‘GDC0001_files-table.2024-12-04.tsv’ is provided with this task as the reference.
+
+repository_search_task_id: GDC0002
+# former_task_id: example A6
+web: https://portal.gdc.cancer.gov/analysis_page?app= 
+ques: From the Genomic Data Commons site, download a manifest of the DNA methylation data txt files for patients with glioblastoma. 
+query_information: Under Cohort Builder: ‘Primary Diagnosis’ in ['glioblastoma', 'glioblastoma multiforme']. Under Repository: ‘Data Category’ IS ‘dna methylation’ and ‘Data Format’ IS ‘txt’. Then click the button ‘Manifest’ to download the file.
+# note: I selected all the 'Primary Diagnosis' values containing ‘glioblastoma’.
+rubric: ‘GDC0002_gdc_manifest.2024-12-04.131958.txt’ is provided with this task as the reference.
+
+repository_search_task_id: GDC0003
+# former_task_id: example B3
+web: https://portal.gdc.cancer.gov/analysis_page?app= 
+ques: From the Genomic Data Commons, download a metadata file with information about the samples with WGS or WXS aligned reads data from normal tissue samples from patients with neuroblastomas.
+query_information: Under Cohort Builder: 'Tumor Code' in ['neuroblastoma (nbl)']  and 'Tissue Type' in ['normal'] and ‘Experimental Strategy’ in [‘WGS’, 'WXS'] and 'Data Type' in ['Aligned Reads']. Under Repository: ‘Experimental Strategy’ in [‘WGS’, 'WXS'] and 'Data Type' in ['Aligned Reads'] and 'Tissue Type' in ['normal']. Then under Download Associated Metadata, select 'Sample Sheet' to download the file.
+# note: 'Primary Diagnosis' in ['neuroblastoma, NOS] is a reasonable alternative to using 'Tumor Code' here. They do show different numbers of cases though.
+rubric: ‘GDC0003_gdc_sample_sheet.2024-12-04.tsv’ is provided with this task as the reference.
+
+repository_search_task_id: GDC0004
+# modified version of former_task_id: example B5
+web: https://portal.gdc.cancer.gov/analysis_page?app= 
+ques: From the Genomic Data Commons, download a file with clinical information about the patients from whom there is RNA sequence data from pheochromocytoma or paraganglioma samples.
+query_information: Under Cohort Builder: 'Experimental Strategy' in ['RNA-Seq','scRNA-Seq'] and 'Primary Diagnosis' in ['extra-adrenal paraganglioma, malignant','extra-adrenal paraganglioma, nos', 'paraganglioma, malignant','paraganglioma, nos', 'pheochromocytoma, malignant', 'pheochromocytoma, nos']  and 'Tissue Type' in ['tumor']. Then click on the button with the number of cases, and under 'Clinical', select either tsv or json. Within the zipfile, select the file named "clinical.tsv".
+# note: I selected all the 'Primary Diagnosis' values that contain either 'paraganglioma' or 'pheochromocytoma'.
+rubric: 'GDC0004_clinical.tsv' is provided with this task as the reference.
+
+repository_search_task_id: GDC0005
+# modified version of former_task_id: example B6
+web: https://portal.gdc.cancer.gov/analysis_page?app= 
+ques: From the Genomic Data Commons, download a metadata file about samples from patients from whom there is whole genome sequencing (WGS) data from colorectal cancer samples. 
+query_information: Under Cohort Builder: 'Primary Site' in ['Colon','Rectosigmoid junction','Rectum']  and 'Tissue Type' in ['tumor'] and  'Experimental Strategy' in ['WGS']. Then click on the button with the number of cases, and under 'Biospecimens', select either tsv or json. Within the zipfile, select the file named "sample.tsv".
+# note: There was no 'colorectal cancer' under Tumor type or Primary Diagnosis. Therefore, I used Primary Site options, and selected these anatomy terms. Based on an internet search, 'Rectosigmoid junction' is part of the colon and therefore I included it.
+rubric: 'GDC0005_sample.tsv' is provided with this task as the reference. 
+
+repository_search_task_id: GDC0006
+# former_task_id: example B7
+web: https://portal.gdc.cancer.gov/analysis_page?app=
+ques: From the Genomic Data Commons, download a metadata file with information about all the bam files from whole transcriptome (RNA-Seq), whole exome (WESeq), and/or whole genome (WGSeq) sequencing for cancer samples of the following pediatric cancer types: Acute Lymphoblastic Leukemia (ALL), Acute Myeloid Leukemia (AML), Neuroblastoma (NBL), Kidney Tumors (WT, RT, CCSK), and Osteosarcoma (OS). Include only pediatric cases, where age at diagnosis was less than 20 years old.
+query_information: Under Cohort Builder: 'Experimental Strategy' in ['WGS'; 'WXS' ;'RNA-Seq'] and 'Tumor Code' is any term with one of the following abbreviations:[ 'ALL', 'AML', 'NBL', 'WT', 'RT', 'CCSK', and 'OS'] and 'Data Format'in ['bam'] and Age at Diagnosis >=0 and < 20 years. Under Repository: 'Experimental Strategy' in ['WGS'; 'WXS' ;'RNA-Seq'] and 'File Type' in ['bam'] and 'Tissue Type' in ['tumor']. Then under Download Associated Metadata, select 'Sample Sheet' to download the file.
+# note: I selected 'Tumor Code' values that contained the abbreviations listed in query_information. There was one value per abbreviation.
+rubric: 'GDC0006_gdc_sample_sheet.tsv' is provided with this task as the reference. 
+
+
+# Search tasks for Human Tumor Atlas Network (HTAN)
+
+repository_search_task_id: HTAN0001
+# former_task_id: example A1 
+web: https://humantumoratlas.org/explore
+ques: On the Human Tumor Altas Network data exploration site, find the number of cases in the Colon Molecular Atlas Project.
+query_information: 'Atlas Description' IS 'Colon Molecular Atlas Project'. Under 'Cases', find the number.
+# For this task, the answer is simply the number shown for rubric and there is no associated file.
+rubric: 156
+
+repository_search_task_id: HTAN0002
+# former_task_id: similar but not identical to former example B4
+web: https://humantumoratlas.org/explore
+ques: From the Human Tumor Atlas Network, download a metadata file with patient case information for patients with a primary diagnosis of malignant glioma from whom there is single-cell RNA-seq data.
+query_information: Disease ('Glioma malignant') AND Assay ('scRNA-seq'). Go to the 'Cases' tab and then select 'Download Metadata'.
+rubric: ‘HTAN0002_table_data.tsv’ is provided with this task as the reference. 
+
+repository_search_task_id: HTAN0003
+# former_task_id: (none)
+web: https://humantumoratlas.org/explore
+ques: From the Human Tumor Atlas Network, download a file with metadata about image files of lung samples analyzed using Multiplexed Ion Beam Imaging (MIBI).
+query_information: Organ ('Lung') AND Assay ('MIBI').  Go to the 'Files' tab and then select 'Download Metadata'.
+rubric: ‘HTAN0003_table_data.tsv’ is provided with this task as the reference.
+
+
+# Search tasks for cBioPortal--Set 1
+
+repository_search_task_id: CBIOP0001
+# former_task_id: cBioPortal task 1
+ques: From cBioPortal, obtain information about available studies with data from patients with adrenocortical carcinoma.
+# query_information: Query for studies that have "description" or "name" containing the text "adrenocortical carcinoma" or have cancerTypeId=="acc". Return all study metadadata.
+rubric: "CBIOP0001_acc_studies.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0002
+# former_task_id: cBioPortal task 2
+ques: From cBioPortal, get a list of the available datasets for renal clear cell carcinoma from the TCGA Pan-Cancer study.
+query_information: Query for studies that have ("tcga" and ("pancancer" OR "pan-cancer") in "description" or "name") and ("renal clear cell carcinoma" in ("name" or "description") or have cancerTypeId=="ccrcc"). Obtain the studyId. For this studyId, obtain the study profile and download the list of values under the variable "molecularProfileId".
+rubric: "CBIOP0002_ccrcc_tcga_pancancer_data_files_list.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0003
+# former_task_id: cBioPortal task 3
+ques: From cBioPortal, get mutational data from patients with acute myeloid leukemia associated with the paper Bottomly et al. Cancer Cell 2022, PMID:35868306
+query_information: Query for a study that has ("acute myeloid leukemia" in ("name" or "description") or cancerTypeId=="acl") and has pmid=="35868306". Obtain the studyId. Use this studyId to obtain this study's mutation data.
+rubric: "CBIOP0003_acl_Bottomly_mut_data.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0004
+# former_task_id: cBioPortal task 4
+ques: From cBioPortal, get clinical data for the following patients: "TCGA-05-4244", "TCGA-05-4249", "TCGA-05-4250", "TCGA-05-4384", "TCGA-05-3889", "TCGA-05-4390". Use the clinical data associated with the studyId "luad_tcga_gdc".
+query_information: Request all clinical data for patientId in ("TCGA-05-4244", "TCGA-05-4249", "TCGA-05-4250", "TCGA-05-4384", "TCGA-05-3889", "TCGA-05-4390") from studyId "luad_tcga_gdc".
+rubric: "CBIOP0004_clinical_patientIds_luad_gdc_tcga.csv" is provided with this task as the reference.
+
+
+# Search tasks for cBioPortal--Set 2
+
+# This set includes seven tasks that are steps in addressing an overarching data request. You may make use of the overarching data request statement (below), or choose not to and just use the seven tasks.
+# The data request is based on the use of cBioPortal data in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10654613/ See Figure 2 and the "Data acquisition" section.
+# The seven tasks are inspired by steps taken in working through this example overarching data request using the cbioportalR library in R; see the file 'cbioprotal_search_example.html'
+# These tasks have an additional line that is optional to use, 'ques_dialog_version', which has a more casual style than 'ques' for asking for data as part of a dialog. Feel free to try these or skip them.
+
+# The overarching data request: From the cBioPortal, I want data from tumor samples from lung adenocarcinoma patients in the TCGA study. I want copy number alteration (CNA) data and data on pathological N, pathologic T, cancer stage, and age at diagnosis. 
+
+repository_search_task_id: CBIOP0005
+# former_task_id: cBioPortal Task A1
+ques: From cBioPortal, download information about available studies with data from patients with lung adenocarcinoma patients in the TCGA study.
+# ques_dialog_version: What research studies are available in cBioPortal about lung adenocarcinoma patients in the TCGA study?
+query_information: Query for studies that have ("description" or "name" containing the text "lung adenocarcinoma" or have cancerTypeId=="luad") and ( "tcga" in "description" or "name"). Return all study metadata.
+rubric: "CBIOP0005_luad_tcga_studies.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0006
+# former_task_id: cBioPortal Task A2
+ques: From cBioPortal, download a file with information about the kinds of data available in the 'luad_tcga_gdc' study, including descriptions of the datatypes.
+# ques_dialog_version: Show me the kinds of data available in the 'luad_tcga_gdc' study, including descriptions of the datatypes.
+query_information: Query for available_profiles for the studyid 'luad_tcga_gdc' and return the file. 
+rubric: "CBIOP0006_luad_tcga_gdc_study_profile.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0007
+# former_task_id: cBioPortal Task A3
+ques: From cBioPortal, download copy number alteration data for the 'luad_tcga_gdc' study.
+# ques_dialog_version:Get CNA data for the luad_tcga_gdc study.
+query_information: Query for CNA data associated with the study id 'luad_tcga_gdc'. Return the data file.
+# To avoid storing a large file, the rubric file contains only the first 500 rows of the complete dataset.
+rubric: "CBIOP0007_CNA_luad_tcga_gdc_First_500_rows.csv" is provided with this task as the reference.This file contains only the first 500 rows of the full data file.
+
+repository_search_task_id: CBIOP0008
+# former_task_id: cBioPortal A4
+ques: From cBioPortal, download a file with information about the clinical features that are available for cases in the 'luad_tcga_gdc' study.
+# ques_dialog_version: Show me the clinical features that are available for patients in this study.
+query_information: Query for available_clinical_attributes associated with the study 'luad_tcga_gdc'. Return the data file.
+rubric: "CBIOP0008_luad_tcga_gdc_clinical_features.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0009
+# former_task_id: cBioPortal A5
+ques: From cBioPortal, download pathologic T and pathologic N data from the 'luad_tcga_gdc' study.
+# ques_dialog_version: Get pathologic T and pathologic N data for patients from this study.
+query_information: Query for clinical data by study using the study_id 'luad_tcga_gdc'. Filter the data for entries with clinicalAttributeId with values "PATH_N_STAGE" or "PATH_T_STAGE". Return this dataset.
+rubric: "CBIOP0009_patient_data_path_N_path_T.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0010
+# former_task_id: cBioPortal A6
+ques: In cBioPortal, find studies with tumor stage data for TCGA lung adenocarcinoma patients.
+# ques_dialog_version: What TCGA study data sets of lung adenocarcinoma patients have tumor stage data?
+query_information: Start with the list of studyIds in the dataset that was the answer for repository_search_task_id CBIOP0005. Obtain the available clinical attributes for each of these studies and determine if they include clinicalAttributeId values that include the string "TUMOR_STAGE". Return the studyIds for which this is true.
+rubric: "CBIOP0010_answers.csv" is provided with this task as the reference.
+
+repository_search_task_id: CBIOP0011
+# former_task_id: cBioPortal A7
+ques: From cBioPortal, download a file with age at diagnosis and tumor stage data from study 'luad_tcga_pan_can_atlas_2018'.
+# ques_dialog_version: Get  age at diagnosis and tumor stage data from the luad_tcga_pan_can_atlas_2018 study data.
+query_information: Obtain the clinical attributes for the study with studyid 'luad_tcga_pan_can_atlas_2018'. Use the entries under 'displayName, 'description', and/or 'clinicalAttributeId' to identify the clinicalAttributeId values for age at diagnosis and tumor stage. Obtain the clinical data for the study with studyID 'luad_tcga_pan_can_atlas_2018'. Filter this for the identified clinicalAttributeID values and return this dataset.
+rubric: "CBIOP0011_patient_data_age_at_diag_tumor_stage_2018.csv" is provided with this task as the reference.
+
+

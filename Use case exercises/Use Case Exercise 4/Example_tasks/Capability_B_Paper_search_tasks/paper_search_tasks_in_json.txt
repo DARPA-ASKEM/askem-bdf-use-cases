@@ -1,0 +1,302 @@
+[
+    {
+        "query_number": "1",
+        "task": "Find single cell RNA sequencing data from bone marrow samples from healthy persons.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11008188/",
+                    "paper_title": "Single-cell systems pharmacology identifies development-driven drug response and combination therapy in B cell acute lymphoblastic leukemia",
+                    "answers": [
+                        {
+                            "url": "https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp1",
+                            "evidence": [
+                                "To characterize the biology of normal human hematopoiesis and particularly B cell development, we examined the scRNA-seq profiles of 283,893 cells from the BM samples of eight healthy donors included in the Human Cell Atlas Census of Immune Cells dataset.25 ",
+                                "Human Cell Atlas Census of Immune Cells dataset is available at https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79?catalog=dcp1. "
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "2",
+        "task": "Find single cell RNA sequencing data from bone marrow samples from patients with B cell acute lymphoblastic leukemia.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11008188/",
+                    "paper_title": "Single-cell systems pharmacology identifies development-driven drug response and combination therapy in B cell acute lymphoblastic leukemia",
+                    "answers": [
+                        {
+                            "source": "NCBI GEO",
+                            "dataset_id": "GSE235787",
+                            "evidence": [
+                                "To validate the association of B cell developmental networks and asparaginase response identified by the NetBID2 analysis described previously, we performed 10× Genomics scMultiome analysis (joint profiling of RNA and transposase-accessible chromatin [ATAC] signals in individual nuclei) of primary blast cells from two asparaginase-sensitive (one Ph-like_CRLF2 and one near-haploid) and two resistant (one KMT2A and one BCR::ABL1) B-ALL cases that were selected based on ex vivo pharmacotyping (Figure S3A). ",
+                                "The 10x Genomics scRNA-seq and scMultiome data generated in this study is available at NCBI GEO: GSE235787, Token: orgbuscarvqddaz."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "3",
+        "task": "Find whole exome sequencing data from non-small-cell lung cancer samples from patients.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10115639/",
+                    "paper_title": "Genomic–transcriptomic evolution in lung cancer and metastasis",
+                    "answers": [
+                        {
+                            "source": "European Genome–phenome Archive",
+                            "dataset_id": "EGAS00001006494",
+                            "evidence": [
+                                "We analysed matched RNA-seq and whole-exome sequencing data from 347 patients recruited into the prospective study TRACERx (TRACERx 421 cohort). Samples from the cohort comprised 947 tumour regions from 354 NSCLC tumours (6 patients harboured multiple primaries at diagnosis),",
+                                "The RNA-seq, whole-exome sequencing and RRBS data (in each case from the TRACERx study) used during this study have been deposited at the European Genome–phenome Archive, which is hosted by the European Bioinformatics Institute and the Centre for Genomic Regulation, under the accession codes EGAS00001006517 (RNA-seq), EGAS00001006494 (whole-exome sequencing) and EGAS00001006523 (RRBS). Access is controlled by the TRACERx data access committee. Details on how to apply for access are available at the linked page."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "4",
+        "task": "Find survival data for patients with both primary and metastatic breast cancer tumor samples with RNA-seq and exome sequencing data.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9886551/",
+                    "paper_title": "Multiomics in primary and metastatic breast tumors from the AURORA US network finds microenvironment and epigenetic drivers of metastasis",
+                    "answers": [
+                        {
+                            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9886551/bin/43018_2022_491_MOESM2_ESM.rar",
+                            "file_name": "Supplementary_Table.2.xlsx",
+                            "sheet": "3.Survival data AURORA",
+                            "evidence": [
+                                "Supplementary Table 2 includes the clinical and molecular characteristics available for each cohort used in this manuscript. ",
+                                "Survival data AURORA study"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "5",
+        "task": "Find DNA methylation data from metastatic breast cancer samples from patients.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9886551/",
+                    "paper_title": "Multiomics in primary and metastatic breast tumors from the AURORA US network finds microenvironment and epigenetic drivers of metastasis",
+                    "answers": [
+                        {
+                            "source": "GEO",
+                            "dataset_id": "GSE212375",
+                            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212375",
+                            "evidence": [
+                                "Briefly, all newly generated data are in dbGAP (AURORA study: phs002622.v1.p1; RAP study: phs002429.v1.p1) and GEO (AURORA study: RNAseq data (GSE209998), DNA methylation data (GSE212375); RAP study: RNAseq data (GSE193103)). "
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "6",
+        "task": "Find summary statistics about the frequency of deletions for chromosome arms in basal subtype breast cancer samples.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11063629/",
+                    "paper_title": "Evolution of chromosome-arm aberrations in breast cancer through genetic network rewiring",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11063629/bin/mmc2.xlsx",
+                            "dataset_name": "Table S1",
+                            "sheet": "S1A-Basal - Broad significance",
+                            "evidence": [
+                                "We investigated the frequency of chromosome-arm losses in the breast cancer basal subtype.8 The three most frequent chromosomal-arm losses in basal breast cancer were 8p, 5q, and 4p, occurring collectively in ∼65%–76% of cases (Figures 1B and S1A; Table S1A)."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "7",
+        "task": "Find clinical data for rectal cancer patients with single-cell RNA-sequencing data of cancer samples after Neoadjuvant chemotherapy.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10591051/",
+                    "paper_title": "Cancer-associated fibroblasts undergoing neoadjuvant chemotherapy suppress rectal cancer revealed by single-cell and spatial transcriptomics",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10591051/bin/mmc1.pdf",
+                            "file_name": "mmc1.pdf",
+                            "dataset_name": "Table S1",
+                            "evidence": [
+                                "To investigate the dynamics of the TME in RC following NAC treatment, we enrolled 29 patients with RC of MSS/pMMR, most of whom were pairwise sampled before (27 samples) and after (29 samples) the treatment (Figure 1A; Table S1). ",
+                                "Table S1. Clinical characteristics of 29 Rectal Cancer patients."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "8",
+        "task": "Find clinical tumor sample characteristics for clear cell renal cell carcinoma tumor samples for which there are whole-genome sequencing, RNA-sequencing, and DNA methylation profiling data.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11148773/",
+                    "paper_title": "Comprehensive proteogenomic characterization of rare kidney tumors",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11148773/bin/mmc2.xlsx",
+                            "file_name": "mc2.xlsx",
+                            "dataset_name": "Table S1",
+                            "sheet": "clinical_characteristics",
+                            "evidence": [
+                                "We performed multi-omics data analysis of 48 non-ccRCC and 103 ccRCC tumors and 101 normal adjacent tissues (NATs) (22 and 79 from non-ccRCC and ccRCC patients, respectively) (Figure S1A; Table S1). Multi-omics data available from common sample aliquots25 include whole-genome sequencing, whole-exome sequencing, DNA methylation profiling, and RNA-seq for all 151 tumor samples, and RNA-seq data for 89 NATs (ccRCC n = 71; non-ccRCC n = 18) (Figure S1A)",
+								"Tab1: ccRCC-non-ccRCC_clinical_characteristics"
+                            ]
+                        },
+						{
+                            "url": "https://cptac-data-portal.georgetown.edu/cptac",
+                            "evidence": [
+                                "Clinical data and raw proteomic data reported in this paper can be accessed via the CPTAC Data Portal at: https://cptac-data-portal.georgetown.edu/cptac."
+                            ]
+                        }
+						
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "9",
+        "task": "Find chromatin immunoprecipitation sequencing data from lung adenocarcinoma patient-derived xenograft tumor samples.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11369616/",
+                    "paper_title": "Advanced EGFR Mutant Lung Adenocarcinoma through Epigenomic cfDNA Profiling",
+                    "answers": [
+                        {
+                            "source": "Gene Expression Omnibus",
+                            "dataset_id": "GSE269746",
+                            "evidence": [
+                                "To characterize the epigenomic landscape of transformed (t)SCLC relative to LUAD and de novo SCLC, we performed chromatin immunoprecipitation sequencing (ChIP-seq) to profile the histone modifications H3K27ac, H3K4me3, and H3K27me3; methylated DNA immunoprecipitation sequencing (MeDIP-seq); assay for transposase-accessible chromatin sequencing; and RNA sequencing on 26 lung cancer patient-derived xenograft (PDX) tumors.",
+                                "The PDX epigenomic data have been deposited in Gene Expression Omnibus (GSE269746)."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "10",
+        "task": "Find clinical data that is associated with lung adenocarcinoma patient-derived xenograft tumors with chromatin immunoprecipitation sequencing data.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11369616/",
+                    "paper_title": "Advanced EGFR Mutant Lung Adenocarcinoma through Epigenomic cfDNA Profiling",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11369616/bin/ccr-24-0466_supplementary_table_s1_suppts1.pdf",
+                            "file_name": "ccr-24-0466_supplementary_table_s1_suppts1.pdf",
+                            "dataset_name": "Supplementary Table S1",
+                            "evidence": [
+                                "Supplementary Table S1 Clinical data for PDX models."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "11",
+        "task": "Find clinical data about pancreatic ductal adenocarcinoma samples that have phosphoproteomic data.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11306541/",
+                    "paper_title": "Kinase activities in pancreatic ductal adenocarcinoma with prognostic and therapeutic avenues",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11306541/bin/MOL2-18-2020-s001.zip",
+                            "zip_file_name": "MOL2-18-2020-s001.zip",
+                            "file_name": "mol213625-sup-0012-TableS1.xlsx",
+                            "dataset_name": "Table S1",
+                            "sheet": "spacious",
+                            "evidence": [
+                                "The clinical and pathological features of these samples are summarized in Table S1."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "12",
+        "task": "Find mass spectrometry proteomic data from individual pancreatic ductal adenocarcinoma samples.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11306541/",
+                    "paper_title": "Kinase activities in pancreatic ductal adenocarcinoma with prognostic and therapeutic avenues",
+                    "answers": [
+                        {
+                            "source": "ProteomeXchange Consortium",
+                            "dataset_id": "PXD043111",
+                            "evidence": [
+                                "The mass spectrometry proteomics data have been deposited to the ProteomeXchange Consortium via the PRIDE [117] partner repository with the dataset identifier PXD043111."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "query_number": "13",
+        "task": "Find results data about the abundances of phosphoproteins involved in KRAS signaling pathways from pancreatic ductal adenocarcinoma samples with KRAS G12D, G12V, and G12R mutations.",
+        "answer_set": [
+            {
+                "paper_answer_set": {
+                    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11306541/",
+                    "paper_title": "Kinase activities in pancreatic ductal adenocarcinoma with prognostic and therapeutic avenues",
+                    "answers": [
+                        {
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11306541/bin/MOL2-18-2020-s001.zip",
+                            "zip_file_name": "MOL2-18-2020-s001.zip",
+                            "file_name": "mol213625-sup-0017-TableS7.xlsx",
+                            "dataset_name": "Table S7",
+                            "sheet": "spacious",
+                            "evidence": [
+                                "Differential phosphosites related to this were identified (Fig. S9d and Table S7).",
+                                "Table S7. Differential analysis of pS/T sites between KRAS G12D mutated and the rest of tumors (G12V, G12R)."
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

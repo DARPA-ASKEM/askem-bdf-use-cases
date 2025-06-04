@@ -1,0 +1,7 @@
+README Info about GDC Data Terms of Use
+
+When using these rubric datasets, please abide by the GDC Data Policies, https://gdc.cancer.gov/about-gdc/gdc-policies#:~:text=Any%20user%20accessing%20GDC%20open,whom%20the%20data%20were%20obtained.
+From this site:
+"Any user accessing GDC open data must adhere to the NIH Genomic Data Sharing (GDS) Policy which indicates that investigators who download unrestricted-access data from NIH-designated data repositories should:
+- Not attempt to identify individual human research participants from whom the data were obtained.
+- Acknowledge in all oral or written presentations, disclosures, or publications the specific dataset(s) or applicable accession number(s) and the NIH-designated data repositories through which the investigator accessed any data."

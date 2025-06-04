@@ -1,0 +1,11 @@
+Access	File Name	Data Category	Data Format	Experimental Strategy	File Size
+Open	04ab6839-2991-4f76-bbc2-24612ef2aa31_noid_Grn.idat	DNA Methylation	IDAT	Methylation Array	13676256
+Open	04ab6839-2991-4f76-bbc2-24612ef2aa31.methylation_array.sesame.level3betas.txt	DNA Methylation	TXT	Methylation Array	23284169
+Open	04ab6839-2991-4f76-bbc2-24612ef2aa31_noid_Red.idat	DNA Methylation	IDAT	Methylation Array	13676256
+Controlled	bc7800fb-a548-4e92-863d-be3c0c07dddf.rna_seq.transcriptome.gdc_realn.bam	Sequencing Reads	BAM	RNA-Seq	10997884589
+Controlled	bc7800fb-a548-4e92-863d-be3c0c07dddf.rna_seq.star_splice_junctions.tsv.gz	Transcriptome Profiling	TSV	RNA-Seq	3179499
+Open	ffc973c5-5ec7-42d6-84a0-be067d93098f.rna_seq.augmented_star_gene_counts.tsv	Transcriptome Profiling	TSV	RNA-Seq	4202957
+Controlled	CPTAC-3.7e77d512-6086-4a87-9a5a-dd11ca861e35.star_fusion.rna_fusion.tsv	Structural Variation	TSV	RNA-Seq	234
+Open	bc7800fb-a548-4e92-863d-be3c0c07dddf.rna_seq.augmented_star_gene_counts.tsv	Transcriptome Profiling	TSV	RNA-Seq	4239321
+Controlled	CPTAC-3.d7c7591a-a81e-4612-b730-52ac6eb198d3.star_fusion.rna_fusion.tsv	Structural Variation	TSV	RNA-Seq	234
+Controlled	CPTAC-3.c1047f0f-709c-4b6a-b667-75835d0305c1.arriba.rna_fusion.bedpe	Structural Variation	BEDPE	RNA-Seq	340
