@@ -70,29 +70,29 @@ To evaluate a notebook, run
 
     run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [PDF to process]
 
-This produces output with the following sections:
+This produces a tab-delimited file with the following sections:
 
 * A header section with four rows, containing the following information:
-    - The input filename
+    - The input PDF filename that is being evaluated
     - The platform being evaluated
     - A list of all user queries in the dialog
-    - A list of resources and tools used by the assistant to respond to queries 
+    - A list of resources and tools used by the platform to respond to queries 
 * A tabular section with the following columns
-    - Eval Question Number: The question number specified in the prompt
-    - Eval Question: The question as specified in the prompt
-    - Assessment (i.e. response to the eval question): Yes, no, unsure, or not applicable
+    - Eval Question Number: The evaluation question number specified in the prompt
+    - Eval Question: The evaluation question as specified in the prompt
+    - Assessment (i.e. response to the evaluation question): Yes, no, unsure, or not applicable
     - Evidence and Reasoning: The LLM-provided reasoning for the assessment
     - Evidence Snippets: Verbatim text from the dialog supporting the reasoning and assessment
-    - Impact Level: If assessment is no, an additional assessment of the impact (Low, Medium, High)
+    - Impact Level: If assessment is no, an additional assessment of the impact on the scientific validity of the results, interpretations, and/or conclusions (Low, Medium, High)
 * A 30-100 word summary containing strengths, key issues, and recommendations for improvement
  
 ## Summarizing Results
 
 To summarize results from an evaluation, run
 
-    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from evaluation prompt]
+    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from an evaluation]
 
-Thius produces output with the two sections
+This produces a tab-delimited text file with the two sections
 
 * A header section with four rows, containing the same information in the evaluation output.
 * A tabular section with the following columns
@@ -102,7 +102,7 @@ Thius produces output with the two sections
 ## Checking Identifiers
 
 To check identifiers, run
-    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from evaluation prompt]
+    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from an evaluation]
 
 # Wrappers for Running Multiple Evaluations
 
@@ -137,14 +137,14 @@ of data for evaluation. It could be modified to use Claude in the future.
 
 There are two additional scripts that will aggregate results for analysis. 
 
-The first script,`per_question_summary.py` will parse all of the output in a directory and generate a single file with the following columns in addition to the output in each file
+The first script,`per_question_summary.py` will parse all of the evaluation outputs in a directory and generate a single file with the following columns in addition to the output in each file
 
 * Input PDF: The input filename
 * Replicate: The replicate number
 
 This script is run as follows:
 
-    per_question_summary.py [directory]
+    per_question_summary.py [FOLDER CONTAINING EVALUATION OUTPUTS]
 
 A second script, `summarize_tools.py` extracts the tools and resources identified by the LLM judge. 
 This produces a CSV output with the following columns:
