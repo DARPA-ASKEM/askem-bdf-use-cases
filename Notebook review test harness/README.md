@@ -24,15 +24,15 @@ detail later in this README.
     └── requirements.txt
 
 
-# Generating data
+# Generating Data
 
 The prompts used in this evaluation take PDF files as input. To generate these, either use
 the PDF export functionality in Jupyter notebook, or print to PDF directly - the latter
 requires starting the notebook server with `jupter lab` vs `jupyter notebook` to get
-appropriate formatting. If these methods do not work, exporting to HTML, then printing
-is another method to produce PDFs.
+appropriate formatting. If these methods do not work, consider exporting to HTML and then printing
+to produce PDFs.
 
-# Setting up your environment
+# Setting Up Your Environment
 
 The suggested method for running these scripts is to use a virtual environment, either
 created using the `virtualenv` module or with a python environment manager (e.g. 
@@ -42,7 +42,7 @@ necessary packages:
     pip install -r requirements.txt
 
 Next, set the API keys for the LLM providers that will be used. For OpenAI models, set
-`OPENAI_API_KEY` and for Antropic models, set `ANTHROPIC_API_KEY`. If you need to create
+`OPENAI_API_KEY` and for Anthropic models, set `ANTHROPIC_API_KEY`. If you need to create
 an API key, see the instructions below
 
 * OpenAI: https://platform.openai.com/account/api-keys
@@ -60,11 +60,11 @@ functionality is enabled by using the `--prompt-name` option. The available prom
 * `identifier_check`: This prompt uses a [LangChain](https://www.langchain.com/) agent to
    look up any gene/protein identifiers used as input to check whether the identifier corresponds to
    the appropriate entity. Lookups are peformed via web search (DuckDuckGo). 
-   Note that this prompt is a work in progress and likely could be improved. 
+   Note that this prompt is a work in progress and could likely be improved. 
 
 The prompts can be found in the `prompts` directory. 
 
-## Evaluating a notebook
+## Evaluating a Notebook
 
 To evaluate a notebook, run
 
@@ -79,18 +79,18 @@ This produces output with the following sections:
     - A list of resources and tools used by the assistant to respond to queries 
 * A tabular section with the following columns
     - Eval Question Number: The question number specified in the prompt
-    - Eval Question: The Question as specified in the prompt
-    - Assessment: Yes, no, unsure, or not applicable
-    - Evidence and Reasning: The LLM-provided reasoning for the assessment
+    - Eval Question: The question as specified in the prompt
+    - Assessment (i.e. response to the eval question): Yes, no, unsure, or not applicable
+    - Evidence and Reasoning: The LLM-provided reasoning for the assessment
     - Evidence Snippets: Verbatim text from the dialog supporting the reasoning and assessment
-    - Impact Level: If assessment is no, an assessment of the impact (Low, Medium, High)
+    - Impact Level: If assessment is no, an additional assessment of the impact (Low, Medium, High)
 * A 30-100 word summary containing strengths, key issues, and recommendations for improvement
  
 ## Summarizing Results
 
-To summarize results, run
+To summarize results from an evaluation, run
 
-    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file from evaluation prompt]
+    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from evaluation prompt]
 
 Thius produces output with the two sections
 
@@ -102,9 +102,9 @@ Thius produces output with the two sections
 ## Checking Identifiers
 
 To check identifiers, run
-    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file from evaluation prompt]
+    run_evaluation.py --prompt-name eval_methods --provider [openai/claude] --platform [Name of the platform that produced the notebook] [Results file generated from evaluation prompt]
 
-# Wrappers for running multiple evaluations
+# Wrappers for Running Multiple Evaluations
 
 ## Evaluating PDFs
 
@@ -120,10 +120,9 @@ This will create a set of files of the format:
 
 in the directory containing the pdf files. Note: this does not use available batching APIs, and the process could likely be further optimized.
 
-## Summarizing problems from outputs
+## Summarizing Problems From Outputs
 
-The `run_problems.sh` script can then be used to summarize the output (as implemented just the first run)
-and identify specific problems. 
+The `run_problems.sh` script can then be used to summarize the outputs from evaluation over a set of PDFs and identify specific problems. 
 
     run_problems.sh [FOLDER CONTAINING PDFs] [platform]
 
@@ -134,11 +133,11 @@ This will produce the following file corresponding to each PDF in the directory:
 Note that this script runs only with OpenAI as a provider, based on choices made during generation
 of data for evaluation. It could be modified to use Claude in the future.
 
-## Aggregating output for Analysis
+## Aggregating Output for Analysis
 
-There are two additional scripts that will aggregate results for analysis. The first,
-`per_question_summary.py` will parse all of the output in a directory and generate a single 
-file with the following columns in addition to the output in each file
+There are two additional scripts that will aggregate results for analysis. 
+
+The first script,`per_question_summary.py` will parse all of the output in a directory and generate a single file with the following columns in addition to the output in each file
 
 * Input PDF: The input filename
 * Replicate: The replicate number
@@ -147,8 +146,8 @@ This script is run as follows:
 
     per_question_summary.py [directory]
 
-A second script extracts the tools and resources identified by the LLM judge. 
-This produces CSV output with the following columns:
+A second script, `summarize_tools.py` extracts the tools and resources identified by the LLM judge. 
+This produces a CSV output with the following columns:
 
 * pdf_filename: The input filename
 * number_of_tools: The number of tools used within the workflow, as identified by the LLM judge.
