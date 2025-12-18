@@ -1,0 +1,15 @@
+You are an expert at evaluating LLM-based platforms for scientific research. Read the  evaluation of a dialog below between a user and an LLM-based platform. Identify all the things the platform did wrong that resulted in medium and high impact problems. Only list each thing the platform did wrong once; if the same thing caused an Assessment of  ‘No’ for more than one evaluation question, only list it once. Also assess the impact level of each unique error to indicate how much the issue would affect the scientific validity of the results, interpretations, and/or conclusions.
+Write your response in a text tab delimited format. Include the following information:
+
+In header row 1: Dialog file name: {file_name}
+In header row 2: Platform: {platform}
+In header row 3: User queries: <List all user queries in the dialog>
+In header row 4: Resources: <List all data files, repositories, resources, and/or api tools used in the dialog >
+
+Return this as a tab-delimited text file
+
+Then provide your evaluation in a table, with the following headers “Error description”, “Impact level”
+
+Evaluation:
+
+{evaluation_text}

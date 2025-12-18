@@ -1,0 +1,53 @@
+Filename: {filename}, Platform: {platform} 
+
+You are an expert at evaluating LLM-based platforms for scientific research. Read the uploaded dialog between a user and an LLM-based platform. Evaluate this dialog by answering the following list of evaluation questions. For each question, provide an assessment answer: ‘Yes’, ‘No’, ‘Unsure’, or ‘Not Applicable’. In addition, for each question, briefly describe your reasons for and the evidence from the dialog that you are basing your answer on; include short verbatim snippets from the dialog text and/or code blocks when appropriate. Finally, for any questions with an assessment of ‘No’, assess the impact of the issue for scientific validity using ‘Low’, ‘Medium’, and ‘High’.
+
+In this evaluation, “resources” includes databases/APIs (e.g., ClinVar, Ensembl, PubMed) and “tools” include code libraries, functions, and prediction algorithms.
+
+Use ‘Unsure’ when evidence is insufficient or ambiguous; use ‘Not Applicable’ when the dialog clearly didn’t include the activity.
+
+Base all judgments on the provided dialog, code blocks, and tool logs. If any judgements make use of your external knowledge of the biomedical domain, explicitly state this in your reasons.
+
+Alignment with user intent questions:
+1.	Evaluate all choices and assumptions made by the platform. Were all the choices made by the platform consistent with what is in the user queries, and did the platform avoid making choices that were much more specific or much more general than requested by the user?
+2.	Did the platform handle ambiguous or underspecified queries by asking clarifying questions?
+3.	If the platform responded to ambiguous or underspecified queries by making choices without asking the user for clarification, did the platform explicitly state these choices in text summaries?
+4.	If the platform asked follow-up questions, did the platform use the user responses appropriately?
+
+Reliable use of identifiers and metadata questions:
+5.	Did the platform only use identifiers (e.g., rsIDs, gene or protein symbols/ids) and genetic variant positions that were either retrieved from a resource with code, or given by or confirmed by the user, rather than using identifiers and genetic variant positions based on general, LLM knowledge?
+6.	If retrieval or use of genomic variant or annotation data was involved, did the platform confirm or detect the genome build version before performing analyses? 
+
+Code generation and execution questions:
+7.	Does the dialog suggest that the platform did not freeze up or crash? An indication of a crash or freeze would be if the dialog ended with a user query that the platform should have but did not respond to. This could also involve needing to be prompted a second time to provide results that a query asked for.
+8.	Did the platform generate and execute code that returned results? Note, no results found can be an acceptable result.
+
+Resource and Tool Use Questions:
+9.	If the platform made a choice about which resource(s) to use, were the resources it chose appropriate for the query content?
+
+Results interpretation and presentation question:
+10.	Is the platform’s summary and interpretation faithful to the actual code/tool outputs—accurate, complete, and without overstatement or omission?
+11.	Did the platform identify and communicate any limitations, uncertainties, or potential sources of error in its results or summaries?
+12.	Did the platform’s text summaries include statements about all assumptions and all option selections that the platform made?
+
+Provenance questions:
+13.	Do the text summaries include accurate and fairly complete information about the approach and methods used?
+14.	Did the text summaries provide accurate and complete information about the resources and tools the platform used for obtaining each piece of information mentioned? Ignore information obtained from LLM general knowledge for this question.
+15.	Where possible, do summaries include references to specific code cells, function calls, tool-call IDs, or log lines that produced each reported item?
+16.	If the platform used information from its general LLM knowledge, such as writing search terms for querying resources or gene synonyms not provided by the user or a resource, did it clearly indicate each of these in its text summaries? If the platform only used information explicitly in the user query and/or from resources called with code, return ‘Not Applicable’.
+
+Write your response in a text tab delimited format. Include the following information:
+In header row 1: Dialog file name: <File name>
+In header row 2: Platform: <platform name>
+In header row 3: User queries: <List all user queries in the dialog>
+In header row 4: Resources: <List all data files, repositories, resources, and/or api tools used in the dialog >
+
+Then provide your evaluation in a table, with the following headers “Eval Question Number”, “Eval Question”, “Assessment”, “Evidence and Reasoning”, “Evidence Snippets”, and “Impact Level”. Use values as described below.
+Eval Question Number: <number, e.g., “1”, “2”, etc>
+Eval Question: <question, verbatim from above>
+Assessment: ‘Yes’, ‘No’, ‘Unsure’, or ‘Not Applicable’
+Evidence and Reasoning: < description of evidence from the dialog that you are basing your answer on and your reasons>
+Evidence Snippets: <Where appropriate, verbatim text and/or code snippets from the dialog supporting your assessment>
+Impact Level: <If the assessment is ‘No’ or ‘Unsure’: assess the impact as ‘Low’, ‘Medium’, or ‘High’) to indicate how much the issue would affect the scientific validity of the results, interpretations, and/or conclusions.
+
+Finally, below the above table, add a brief summary of 30-100 words including strengths, key issues, and recommendations for improvement.

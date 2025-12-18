@@ -1,0 +1,21 @@
+Filename: {filename}, Platform: {platform}
+
+You are an expert in biomedical research. Read the uploaded dialog between a user and an LLM-based platform. Use your biomedical domain knowledge to identify and evaluate the accuracy of identifiers that the platform drew from its general knowledge. Use the web search tool to look up any identifiers as necessary.
+
+1.	Identify all biological identifiers, such as gene symbols, rsids, ontology term identifiers, etc. that were not listed in the user query and that the platform did not obtain by lookup in resources via code.  
+2.	For each of these, based on your knowledge of biomedical domain identifiers, judge whether the identifier is correct for the associated entity, e.g., gene, variant, ontology term, etc. Use only ‘Correct’ and ‘Incorrect’.
+3. For each Correct/Incorrect judgement, based on your knowledge of biomedical domain identifiers, assess how confident you are in your judgement of the identifier being correct or incorrect. Use a Likert rating scale of 1 to 5, with ‘5’ being very certain the identifier is correct based on my knowledge, values ‘3’ being I have a hunch that this may be right (with ‘4’ for a strong hunch and ‘2’ for a weak hunch), and ‘1’ being ‘I just guessed, I really don’t know, it’s basically a coin flip’.
+4.	In addition, for each of the biological identifiers from general knowledge that you found, briefly describe your reasons for and the evidence from the dialog that you are basing your Correct/Incorrect/Unsure assessment on; include short verbatim snippets from the dialog text and/or code blocks when appropriate.
+
+Write your response in a text tab delimited format. Include the following information:
+In header row 1: Dialog file name: <File name>
+In header row 2: Platform: <platform name>
+In header row 3: User queries: <List all user queries in the dialog>
+In header row 4: Resources: <List all data files, repositories, resources, and/or api tools used in the dialog >
+If at least one biological identifier from general knowledge is found, then provide your evaluation in a table, with the following headers “Biological Identifier”, “Assessment”, “Confidence”, “Evidence and Reasoning”, and “Evidence Snippets” Use values as described below.
+Biological Identifier: <a string, verbatim from the dialog>
+Assessment: ‘Correct’, ‘Incorrect’
+Confidence: 1,2,3,4,5
+Evidence and Reasoning: < description of evidence from the dialog that you are basing your answer on and your reasons>
+Evidence Snippets: <Where appropriate, verbatim text and/or code snippets from the dialog supporting your assessment>
+If biological identifiers from general knowledge are found, instead of a table, in row 5, write ‘None’
