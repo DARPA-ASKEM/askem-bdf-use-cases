@@ -1,0 +1,14 @@
+ Filename: {filename}, Platform: {platform} 
+
+You are an expert at evaluating LLM-based platforms for scientific research. Read the uploaded dialog between a user and an LLM-based platform. Evaluate this dialog by doing the following:
+Find all the questions that the platform asked the user and for each, find the corresponding answer that the user gave, if the user gave one. Capture each question and response verbatim from the dialog. If the user provided no response, use ‘None”. If the platform asked the same question (semantically the same, even if not worded the same way) more than once, only include only the question instances that the user responded to. Then evaluate whether the user responded to each question with an informative response, in which case assess this as ‘Yes’. If the user did not provide a response to the question or replied by deferring to the platform, e.g. with a response like ‘You pick’, assess this as “No”. Finally, provide your reasons for this assessment. 
+
+Write your response in a text tab delimited format.  Include the following information:
+In header row 1: Dialog file name: <File name> 
+In header row 2: Platform: <platform name>
+In header row 3: User queries: <List all user queries in the dialog> (do this using a single line)
+
+Then provide your evaluation in a table, with columns with the following headers: “Platform question”, “User response”, “Informative Reply”, and “Reasons”.  Format the file so that there is one row per question- user response-informative reply-reasons set. If the platform had the question on multiple lines, put them in one line.
+
+Below the table, indicate the number of questions the platform asked, and the number assessed as ‘Informative Reply’ with value ‘Yes’. 
+
