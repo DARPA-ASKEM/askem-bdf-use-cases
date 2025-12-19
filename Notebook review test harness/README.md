@@ -137,7 +137,9 @@ of data for evaluation. It could be modified to use Claude in the future.
 
 There are two additional scripts that will aggregate results for analysis. 
 
-The first script,`per_question_summary.py` will parse all of the evaluation outputs in a directory and generate a single file with the following columns in addition to the output in each file
+The first script,`per_question_summary.py` will parse all of the outputs 
+created by running `run_evaluations.sh` in a directory and generate a 
+single file with the following columns in addition to the output in each file
 
 * Input PDF: The input filename
 * Replicate: The replicate number
@@ -146,8 +148,9 @@ This script is run as follows:
 
     per_question_summary.py [FOLDER CONTAINING EVALUATION OUTPUTS]
 
-A second script, `summarize_tools.py` extracts the tools and resources identified by the LLM judge. 
-This produces a CSV output with the following columns:
+A second script, `summarize_tools.py` extracts the tools and resources identified by the LLM judge from the evaluation outputs.
+
+This produces a delimited output with the following columns:
 
 * pdf_filename: The input filename
 * number_of_tools: The number of tools used within the workflow, as identified by the LLM judge.
@@ -157,7 +160,6 @@ This produces a CSV output with the following columns:
 
 This is run as follows:
 
-    summarize_tools.py [directory]
+    summarize_tools.py [FOLDER CONTAINING EVALUATION OUTPUTS]
 
-Both of these scripts assume `openai` as the provider chosen to generate the summaries, 
-and output CSV to standard out.
+Both of these scripts assume `openai` as the provider chosen to generate the summaries, and output CSV to standard out.
